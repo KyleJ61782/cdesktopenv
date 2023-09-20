@@ -460,6 +460,8 @@ _DtTermPrimPtyInit
 	DebugF('p', 3, fprintf(stderr,
 		">>_DtTermPrimPtyInit() using refTio\n"));
 	tio = refTio;
+	/* ensure OPOST is set...that's really the only sane default for dtterm */
+	tio.c_oflag |= OPOST;
 
 #if defined (USE_CSWIDTH)
 	/*
