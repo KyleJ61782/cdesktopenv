@@ -26,7 +26,7 @@ ACTION chromium
 {
      LABEL         chromium
      TYPE          COMMAND
-     EXEC_STRING   chromium-browser %Arg_1%
+     EXEC_STRING   chromium %Arg_1%
      ICON          chrome
      WINDOW_TYPE   NO_STDIO
      DESCRIPTION   CHROMIUM Web Browser.
